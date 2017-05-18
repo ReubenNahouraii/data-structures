@@ -34,7 +34,7 @@ treeMethods.contains = function(target) {
 };
 
 var Node = function(value) {
-  var node = Object.create(Tree);
+  var node = {};
 
   node.value = value;
   node.children = [];
