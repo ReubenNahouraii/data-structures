@@ -17,6 +17,9 @@ Icon
 ###Node###
 
 lib-cov
+*.html
+*.spec.js
+.idea*
 *.seed
 *.log
 *.csv

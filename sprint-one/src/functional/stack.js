@@ -3,6 +3,7 @@ var Stack = function() {
     count : 0,
     storage : {}
   };
+
   // Implement the methods below
   someInstance.push = function(value) {
     someInstance.storage[someInstance.count++] = value;
