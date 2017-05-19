@@ -62,6 +62,23 @@ bstMethods.depthFirstLog = function(func) {
   recurse(node);
 };
 
+bstMethods.breadthFirstLog = function(fn) {
+
+  let que = [this];
+
+  let node;
+  while(que.length) {
+
+    node = que.shift();
+    if(!node) {
+      continue;
+    }
+
+    fn(node.value);
+    que.push(node.left, node.right);
+  }
+};
+
 var bNode = function(value) {
   var node = {};
 
