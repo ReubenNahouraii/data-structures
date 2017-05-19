@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="mocha"></div>
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/mocha/mocha.js"></script>
+<script src="../lib/chai/chai.js"></script>
+<script>
+  mocha.setup('bdd');
+  window.expect = chai.expect;
+
+  $(function() {
+    window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
+  })
+</script>
+<script src="../lib/underscore/underscore.js"></script>
+<script src="doubly-linked-list.js"></script>
+<script src="doubly-linked-list-spec.js"></script>
+</html>
