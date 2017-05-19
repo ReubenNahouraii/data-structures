@@ -50,6 +50,24 @@ treeMethods.removeFromParent = function() {
   return this;
 };
 
+treeMethods.traverse = function(fn) {
+
+  let _traverse = function(node, fn) {
+
+    if(!node) {
+      return;
+    }
+
+    fn(node);
+    node.children.forEach(childNode => {
+      _traverse(childNode, fn);
+    });
+  };
+
+  _traverse(this, fn);
+};
+
+
 var Node = function(value) {
   var node = {};
 

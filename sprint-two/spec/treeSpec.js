@@ -57,4 +57,17 @@ describe('tree', function() {
     expect(tree.children[0].children.length).to.equal(0);
     expect(removedTree.parent).to.equal(null);
   });
+
+  it('should execute a call back function on every value in tree', function() {
+
+    let multiplyByTwo = function(node) {
+      node.value *= 2;
+    };
+
+    tree.addChild(5);
+    tree.addChild(8);
+    tree.children[0].addChild(6);
+    tree.traverse(multiplyByTwo);
+    expect(tree.children[0].value).to.equal(10);
+  });
 });
